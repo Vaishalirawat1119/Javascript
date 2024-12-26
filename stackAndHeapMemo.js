@@ -16,7 +16,7 @@ let studentOne = {
     rollNum : 123333
 }
 
-console.log(myCollege);
+console.log(studentOne);
 
 let studentTwo = studentOne;
 studentTwo.Course = "BTech.";
