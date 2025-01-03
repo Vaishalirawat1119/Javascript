@@ -10,10 +10,10 @@ function one(){
     }
     //console.log(website); //website is not accessible here
     two();
-    
+    console.log(username); //we can access username here also.
 }
 one();
-
+console.log(username); //we cannot access here
 
 if(true){
     const username = "Leo";
@@ -42,4 +42,4 @@ addOne(5); //we can access it here also
 const addTwo = function(num){
     return num + 2;
 }
-console.log(addTwo(8)); 
+console.log(addTwo(8));  //only accessible here.
