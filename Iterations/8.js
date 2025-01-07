@@ -2,16 +2,16 @@
 
 const myNumber = [1,2,3,4,5];
 
-// const myTotal = myNumber.reduce(function (acc,currVal) {
-//     console.log(`accumulator: ${acc} ------ currentValue: ${currVal}`);
-//     return acc + currVal
-// }, 0)
-// console.log(myTotal);
+const myTotal = myNumber.reduce(function (acc,currVal) {
+    console.log(`accumulator: ${acc} ------ currentValue: ${currVal}`);
+    return acc + currVal
+}, 0)
+console.log(myTotal);
 
 
 //with Arrow function
 const result = myNumber.reduce((acc,currVal)=> acc+currVal ,0);
-// console.log(result);
+console.log(result);
 
 
 const shoppingCart = [
