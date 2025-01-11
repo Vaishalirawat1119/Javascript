@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Bubbling</title>
+</head>
+<style>
+    #div1{
+        display: flex;
+        justify-content: center;
+        /* padding: 2rem; */
+        background-color: red;
+        width: 70rem;
+        height: 150px;
+        color: black;
+    }
+    #div2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        margin: 1rem;
+        background-color: yellow;
+        width: 50rem;
+        height: 50px;
+        color: black;
+    }
+    #div3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        margin: 1rem;
+        background-color: green;
+        width: 30rem;
+        height: 20px;
+        color: black;
+    }
+</style>
+<body>
+    <h1>Event Bubbling</h1>
+    <h3>This is how Event Bubbing works!!!!</h3>
+
+    <div id="div1">
+        Container 1
+        <div id="div2">
+            Container 2
+            <div id="div3">
+                Container 3
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('div1').addEventListener('click', () => {
+        alert("Container 1 clicked!!");
+    });
+    document.getElementById('div2').addEventListener('click', () => {
+        alert("Container 2 clicked!!");
+    });
+    document.getElementById('div3').addEventListener('click', (e) => {
+        alert("Container 3 clicked!!");
+        // e.stopPropagation();  //prevents propagation of the same event from being called.
+    });
+</script>
+</html>
