@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Click start button to start the printing and click stop button to stop, in the console.</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let stopBtn = document.getElementById('stop');
+    let startBtn = document.getElementById('start');
+    let intervalId;
+
+    function print(){
+        console.log("Printing...", Date.now());
+    }
+
+    startBtn.addEventListener('click', function(e){
+        startBtn.disabled = true;
+        stopBtn.disabled = false;
+        intervalId = setInterval(print , 1000);
+    });
+
+    stopBtn.addEventListener('click', function(){
+        clearInterval(intervalId);
+        console.log("STOPPED!!!!");
+        stopBtn.disabled = true;
+        startBtn.disabled = false;
+    })
+
+</script>
+</html>
