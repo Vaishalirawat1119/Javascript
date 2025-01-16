@@ -17,7 +17,7 @@ Object literal
 - Instance (new, this)
 
 ## 4 pillars
-Abstraction - Details hide (fetch)
-Encapsulation - wrapped-up data
-Inheritance 
-Polymorphism - many froms
+- Abstraction - Details hide (fetch)
+- Encapsulation - wrapped-up data
+- Inheritance 
+- Polymorphism - many froms
